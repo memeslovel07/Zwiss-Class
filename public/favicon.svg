@@ -1,0 +1,15 @@
+<svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+  <!-- Gradient Background -->
+  <defs>
+    <linearGradient id="gradPremium" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2563eb"/>
+      <stop offset="100%" stop-color="#1e3a8a"/>
+    </linearGradient>
+  </defs>
+  
+  <rect width="120" height="120" rx="24" fill="url(#gradPremium)"/>
+
+  <!-- Bold Z -->
+  <path d="M30 35 H90 L40 85 H100" 
+        fill="none" stroke="white" stroke-width="18" stroke-linejoin="miter"/>
+</svg>

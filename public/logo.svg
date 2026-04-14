@@ -1,0 +1,31 @@
+<svg width="420" height="120" viewBox="0 0 420 120" xmlns="http://www.w3.org/2000/svg">
+
+  <!-- Gradient -->
+  <defs>
+    <linearGradient id="gradPremium" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2563eb"/>
+      <stop offset="100%" stop-color="#1e3a8a"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Z -->
+  <path d="M10 30 H90 L20 90 H100" 
+        fill="none" stroke="url(#gradPremium)" stroke-width="10" stroke-linejoin="miter"/>
+
+  <!-- W -->
+  <path d="M120 30 L135 90 L150 50 L165 90 L180 30" 
+        fill="none" stroke="url(#gradPremium)" stroke-width="10" stroke-linejoin="miter"/>
+
+  <!-- I -->
+  <line x1="210" y1="30" x2="210" y2="90" 
+        stroke="url(#gradPremium)" stroke-width="10"/>
+
+  <!-- S (Angular 1) -->
+  <path d="M240 30 L290 30 L250 60 L300 60 L260 90 L310 90" 
+        fill="none" stroke="url(#gradPremium)" stroke-width="10" stroke-linejoin="miter"/>
+
+  <!-- S (Angular 2) -->
+  <path d="M320 30 L370 30 L330 60 L380 60 L340 90 L390 90" 
+        fill="none" stroke="url(#gradPremium)" stroke-width="10" stroke-linejoin="miter"/>
+
+</svg>

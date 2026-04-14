@@ -1,0 +1,210 @@
+.courses-page-wrapper {
+  padding-top: 6rem;
+}
+
+.courses-header {
+  text-align: center;
+  padding: 4rem 0 2rem;
+}
+
+/* Programs Section */
+.programs-section {
+  padding: 2rem 0 5rem;
+}
+
+.programs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 2.5rem;
+}
+
+.program-card {
+  padding: 2.5rem 2rem;
+  border-radius: 24px;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.program-card.highlight {
+  border: 2px solid var(--accent-primary);
+  background: linear-gradient(180deg, var(--bg-primary) 0%, rgba(79, 70, 229, 0.03) 100%);
+}
+
+.program-card:hover {
+  transform: translateY(-10px);
+  box-shadow: var(--shadow-hover);
+}
+
+.program-icon {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+}
+
+.program-card h3 {
+  font-size: 1.6rem;
+  font-family: var(--font-heading);
+  margin-bottom: 0.5rem;
+}
+
+.badge {
+  display: inline-block;
+  padding: 0.3rem 0.8rem;
+  background: var(--accent-primary);
+  color: white;
+  border-radius: 50px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.program-card p {
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.program-features {
+  list-style: none;
+  padding: 0;
+}
+
+.program-features li {
+  margin-bottom: 0.8rem;
+  color: var(--text-primary);
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+/* Roadmap */
+.roadmap-section {
+  padding: 5rem 0;
+  background: var(--bg-secondary);
+}
+
+.roadmap-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 3rem;
+  margin-top: 3rem;
+}
+
+.roadmap-item {
+  position: relative;
+  padding-left: 1.5rem;
+  border-left: 3px solid var(--accent-primary);
+}
+
+.roadmap-number {
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: rgba(79, 70, 229, 0.15);
+  line-height: 1;
+  position: absolute;
+  top: -20px;
+  left: 0;
+  z-index: 0;
+}
+
+.roadmap-item h4 {
+  font-size: 1.3rem;
+  margin-bottom: 0.8rem;
+  position: relative;
+  z-index: 1;
+}
+
+.roadmap-item p {
+  color: var(--text-secondary);
+  line-height: 1.6;
+  position: relative;
+  z-index: 1;
+}
+
+/* Batches */
+.batches-section {
+  padding: 5rem 0;
+  background: var(--bg-primary);
+}
+
+.batches-container {
+  padding: 4rem 3rem;
+  border-radius: 24px;
+  text-align: center;
+}
+
+.batches-content h2 {
+  font-size: 2.5rem;
+  font-family: var(--font-heading);
+  margin-bottom: 1rem;
+}
+
+.batches-content p {
+  color: var(--text-secondary);
+  max-width: 600px;
+  margin: 0 auto 3rem;
+}
+
+.slots-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+}
+
+.slot-card {
+  background: var(--bg-secondary);
+  padding: 2rem;
+  border-radius: 16px;
+  transition: transform 0.3s;
+  border: 1px solid rgba(0,0,0,0.05);
+}
+
+.slot-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-sm);
+}
+
+.slot-icon {
+  font-size: 2.5rem;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.slot-card h4 {
+  font-size: 1.1rem;
+  margin-bottom: 1.2rem;
+  color: var(--text-primary);
+  border-bottom: 2px solid rgba(0,0,0,0.05);
+  padding-bottom: 0.5rem;
+}
+
+.batch-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+}
+
+.batch-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.8rem;
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+}
+
+.batch-list li span {
+  font-family: monospace;
+  background: rgba(0,0,0,0.04);
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+}
+
+.batch-list li strong {
+  color: var(--accent-primary);
+}
+
+@media (max-width: 768px) {
+  .batches-container {
+    padding: 3rem 1.5rem;
+  }
+}
