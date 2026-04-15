@@ -109,16 +109,31 @@
 
 .nav-announcement {
   text-align: center;
-  font-size: 2.15rem;
-  font-family: var(--font-heading);
   color: #ffffff;
   background: linear-gradient(90deg, var(--accent-primary), var(--accent-tertiary), var(--accent-secondary), var(--accent-primary));
   background-size: 300% auto;
-  padding: 0.8rem 1rem;
-  font-weight: 600;
+  padding: 0.6rem 1rem;
+  font-weight: 700;
   letter-spacing: 0.5px;
   box-shadow: 0 4px 15px -3px rgba(79, 70, 229, 0.3);
   animation: shine 5s linear infinite;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+
+.announcement-title {
+  font-size: 2.15rem;
+  font-family: var(--font-heading);
+  line-height: 1.2;
+}
+
+.announcement-tagline {
+  font-size: 1.2rem;
+  font-family: var(--font-heading);
+  opacity: 0.95;
+  font-weight: 500;
 }
 
 @keyframes shine {
@@ -147,7 +162,12 @@
     margin-top: 0.2rem;
   }
   .nav-announcement {
-    font-size: 1.1rem;
-    padding: 0.4rem;
+    padding: 0.5rem;
+  }
+  .announcement-title {
+    font-size: 1.3rem;
+  }
+  .announcement-tagline {
+    font-size: 0.95rem;
   }
 }

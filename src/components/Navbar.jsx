@@ -17,7 +17,8 @@ const Navbar = () => {
   return (
     <>
       <div className="nav-announcement">
-        Ujjwal Bhaiya की Topper Factory, [अंग्रजी रटें नहीं, सीखें ।]
+        <div className="announcement-title">Ujjwal Bhaiya की Topper Factory,</div>
+        <div className="announcement-tagline">[अंग्रजी रटें नहीं, सीखें ।]</div>
       </div>
       <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
         <div className="container nav-container">

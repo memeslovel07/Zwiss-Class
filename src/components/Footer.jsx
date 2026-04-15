@@ -61,6 +61,9 @@ const Footer = () => {
       <div className="footer-bottom">
         <div className="container">
           <p>&copy; {new Date().getFullYear()} Zwiss English Classes. All rights reserved.</p>
+          <p className="developer-credit">
+            Developer: <a href="https://www.instagram.com/nomunesh" target="_blank" rel="noopener noreferrer">insta @nomunesh</a>
+          </p>
         </div>
       </div>
     </footer>

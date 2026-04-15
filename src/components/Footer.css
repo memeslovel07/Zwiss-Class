@@ -97,10 +97,30 @@
 
 .footer-bottom {
   border-top: 1px solid rgba(0, 0, 0, 0.05);
-  padding: 1.5rem 0;
+  padding: 2rem 0;
   text-align: center;
   color: var(--text-secondary);
   font-size: 0.85rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.developer-credit {
+  font-weight: 500;
+  margin-top: 0.25rem;
+}
+
+.developer-credit a {
+  color: var(--accent-primary);
+  text-decoration: none;
+  font-weight: 600;
+  transition: var(--transition-fast);
+}
+
+.developer-credit a:hover {
+  text-decoration: underline;
+  opacity: 0.8;
 }
 
 @media (max-width: 768px) {
