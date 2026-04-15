@@ -21,7 +21,7 @@ const Hero = () => {
 
         </div>
 
-        <div className="hero-visual" style={{overflow: 'visible', height: 'auto'}}>
+        <div className="hero-visual">
           <div className="floating-card card-1 glass-panel">
             <div className="mockup-header">
               <span className="mockup-dot dot-r"></span>
