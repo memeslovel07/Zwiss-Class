@@ -1,8 +1,8 @@
 .footer {
   background: linear-gradient(to bottom, #ffffff, #f8fafc);
-  padding-top: 6rem;
+  padding-top: 1.5rem;
   border-top: 1px solid rgba(0, 0, 0, 0.05);
-  margin-top: 6rem;
+  margin-top: 1.5rem;
   position: relative;
 }
 

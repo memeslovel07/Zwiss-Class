@@ -16,6 +16,8 @@ import WhatsAppButton from './components/WhatsAppButton'
 import ScrollToTop from './components/ScrollToTop'
 import CoursesList from './components/CoursesList'
 import ReviewsComponent from "./components/Reviews";
+import Syllabus from './components/Syllabus';
+import QuestionPapers from './components/QuestionPapers';
 
 import HomeGallerySlider from './components/HomeGallerySlider'
 import HomeReviewsSlider from './components/HomeReviewsSlider'
@@ -62,6 +64,22 @@ function ReviewsPage(){
   )
 }
 
+function SyllabusPage() {
+  return (
+    <>
+      <Syllabus />
+    </>
+  )
+}
+
+function QuestionPapersPage() {
+  return (
+    <>
+      <QuestionPapers />
+    </>
+  )
+}
+
 function App() {
   return (
     <BrowserRouter>
@@ -73,6 +91,8 @@ function App() {
         <Route path="/gallery" element={<Gallery />} />
         <Route path="/about" element={<AboutPage />} />
          <Route path="/reviews" element={<ReviewsPage />} />
+         <Route path="/syllabus" element={<SyllabusPage />} />
+         <Route path="/question-papers" element={<QuestionPapersPage />} />
       </Routes>
       <Footer />
       <WhatsAppButton />
