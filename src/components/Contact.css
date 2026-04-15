@@ -33,11 +33,22 @@
   margin-bottom: 0.25rem;
 }
 
-.info-item p {
+.info-item a {
   color: var(--text-secondary);
-  font-size: 0.95rem;
-  overflow-wrap: anywhere;
-  word-break: break-word; /* fallback */
+  font-size: 1rem;
+  text-decoration: none;
+  transition: var(--transition-fast);
+  display: inline-block;
+  font-weight: 500;
+}
+
+.info-item a:hover {
+  color: var(--accent-primary);
+  transform: translateX(3px);
+}
+
+.email-link {
+  word-break: break-all;
 }
 
 .info-icon {

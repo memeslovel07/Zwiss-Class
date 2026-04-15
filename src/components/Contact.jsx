@@ -18,8 +18,10 @@ const Contact = () => {
               <span className="info-icon">📞</span>
               <div>
                 <h4>Phone</h4>
-                <p>+91 96954 52323</p>
-                <p>+91 90268 34532</p>
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '5px' }}>
+                  <a href="tel:+919026834532">+91 90268 34532</a>
+                  <a href="tel:+919695452323">+91 96954 52323</a>
+                </div>
               </div>
             </div>
 
@@ -27,7 +29,7 @@ const Contact = () => {
               <span className="info-icon">✉️</span>
               <div>
                 <h4>Email</h4>
-                <p>ujjwalkabirchaurasiya@gmail.com</p>
+                <a href="mailto:ujjwalkabirchaurasiya@gmail.com" className="email-link">ujjwalkabirchaurasiya@gmail.com</a>
               </div>
             </div>
           </div>
