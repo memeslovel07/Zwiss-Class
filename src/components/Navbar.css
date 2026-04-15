@@ -36,7 +36,7 @@
 }
 
 .logo-img {
-  height: 60px;
+  height: 70px;
   width: auto;
   border-radius: 50%;
   object-fit: cover;
@@ -144,30 +144,90 @@
 
 @media (max-width: 768px) {
   .nav-container {
-    flex-direction: column;
-    gap: 0.5rem;
-    padding: 0.5rem 0;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0.5rem 1rem;
+    position: relative;
   }
-  .logo-img {
-    height: 50px;
-  }
-  .logo-text {
-    font-size: 1.6rem;
-  }
-  .nav-links {
+
+  .menu-toggle {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 0.8rem;
-    margin-top: 0.2rem;
+    flex-direction: column;
+    gap: 4px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    z-index: 1001;
   }
+
+  .menu-toggle .dot {
+    width: 6px;
+    height: 6px;
+    background: var(--accent-primary);
+    border-radius: 50%;
+    transition: var(--transition-normal);
+  }
+
+  .menu-toggle.active .dot:nth-child(1) { transform: translateY(10px) scale(1.2); }
+  .menu-toggle.active .dot:nth-child(2) { opacity: 0; }
+  .menu-toggle.active .dot:nth-child(3) { transform: translateY(-10px) scale(1.2); }
+
+  .logo-img {
+    height: 60px;
+  }
+
+  .logo-text {
+    font-size: 1.45rem;
+    margin-left: 10px;
+    letter-spacing: -0.5px;
+    max-width: 170px;
+    line-height: 1.2;
+    filter: drop-shadow(0 2px 4px rgba(79, 70, 229, 0.08));
+  }
+
+  .nav-links {
+    position: absolute;
+    top: calc(100% + 10px);
+    right: 1rem;
+    background: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(10px);
+    width: 220px;
+    flex-direction: column;
+    padding: 1.5rem;
+    gap: 1rem;
+    border-radius: 1.25rem;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    transform: translateY(15px);
+    opacity: 0;
+    pointer-events: none;
+    transition: var(--transition-normal);
+    z-index: 1000;
+  }
+
+  .nav-links.active {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+
+  .nav-links a {
+    font-size: 1.1rem;
+    padding: 0.5rem 0;
+    width: 100%;
+    display: block;
+  }
+
   .nav-announcement {
-    padding: 0.5rem;
+    padding: 0.4rem;
   }
+
   .announcement-title {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
   }
+
   .announcement-tagline {
-    font-size: 0.95rem;
+    font-size: 0.85rem;
   }
 }

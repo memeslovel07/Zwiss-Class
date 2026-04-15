@@ -17,6 +17,9 @@ import ScrollToTop from './components/ScrollToTop'
 import CoursesList from './components/CoursesList'
 import ReviewsComponent from "./components/Reviews";
 
+import HomeGallerySlider from './components/HomeGallerySlider'
+import HomeReviewsSlider from './components/HomeReviewsSlider'
+
 function IndexPage() {
   return (
     <>
@@ -25,6 +28,8 @@ function IndexPage() {
       <Scorers2026 />
       <Features />
       <Toppers />
+      <HomeGallerySlider />
+      <HomeReviewsSlider />
       <Stats />
     </>
   )

@@ -2,22 +2,11 @@ import React, { useState } from "react";
 import "./Reviews.css";
 import Lightbox from "./Lightbox";
 
-// videos
-import video14 from "../../resources/reviews/v.mp4";
-import video15 from "../../resources/reviews/i.mp4";
+import { reviewVideos as videos, reviewImages as images } from '../data/homeData';
 
 const Reviews = () => {
   const [selectedMedia, setSelectedMedia] = useState(null);
 
-  // dynamic images (1.jpg → 12.jpg)
-  const images = Array.from({ length: 12 }, (_, i) =>
-    new URL(`../../resources/reviews/${i + 1}.jpeg`, import.meta.url).href
-  );
-
-  const videos = [
-    { src: video14, label: "Student Success Story" },
-    { src: video15, label: "Topper Feedback" }
-  ];
 
   return (
     <div className="reviews-page">

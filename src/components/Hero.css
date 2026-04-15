@@ -130,7 +130,7 @@
   border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 }
 
-.dot {
+.mockup-dot {
   width: 10px; height: 10px; border-radius: 50%;
 }
 .dot-r { background: #ff5f56; }

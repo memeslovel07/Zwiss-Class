@@ -5,6 +5,7 @@ import LogoImg from '../../resources/logo.jpeg';
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -14,6 +15,9 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
+  const closeMenu = () => setIsMenuOpen(false);
+
   return (
     <>
       <div className="nav-announcement">
@@ -22,20 +26,30 @@ const Navbar = () => {
       </div>
       <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
         <div className="container nav-container">
-        <Link to="/" className="logo">
-          <img src={LogoImg} alt="Zwiss Logo" className="logo-img" />
-          <span className="logo-text text-gradient">Zwiss Class</span>
-        </Link>
-        
-        <ul className="nav-links">
-          <li><Link to="/">Home</Link></li>
-          <li><Link to="/courses">Courses</Link></li>
-          <li><Link to="/gallery">Gallery</Link></li>
-          <li><Link to="/about">About Us</Link></li>
-          <li><Link to="/reviews">Reviews</Link></li>
-        </ul>
-      </div>
-    </nav>
+          <Link to="/" className="logo" onClick={closeMenu}>
+            <img src={LogoImg} alt="Zwiss Logo" className="logo-img" />
+            <span className="logo-text text-gradient">Zwiss English Classes</span>
+          </Link>
+          
+          <button 
+            className={`menu-toggle ${isMenuOpen ? 'active' : ''}`} 
+            onClick={toggleMenu}
+            aria-label="Toggle menu"
+          >
+            <span className="dot"></span>
+            <span className="dot"></span>
+            <span className="dot"></span>
+          </button>
+          
+          <ul className={`nav-links ${isMenuOpen ? 'active' : ''}`}>
+            <li><Link to="/" onClick={closeMenu}>Home</Link></li>
+            <li><Link to="/courses" onClick={closeMenu}>Courses</Link></li>
+            <li><Link to="/gallery" onClick={closeMenu}>Gallery</Link></li>
+            <li><Link to="/about" onClick={closeMenu}>About Us</Link></li>
+            <li><Link to="/reviews" onClick={closeMenu}>Reviews</Link></li>
+          </ul>
+        </div>
+      </nav>
     </>
   );
 };

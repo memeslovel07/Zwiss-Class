@@ -1,4 +1,4 @@
-import React from 'react';
+import { Link } from 'react-router-dom';
 import './Footer.css';
 import LogoImg from '../../resources/logo.jpeg';
 
@@ -7,12 +7,12 @@ const Footer = () => {
     <footer className="footer">
       <div className="container footer-container">
         <div className="footer-brand">
-          <a href="/" className="logo" style={{display: 'flex', alignItems: 'center'}}>
-            <img src={LogoImg} alt="Zwiss Logo" style={{height: '35px', borderRadius: '50%', marginRight: '8px'}} />
-            Zwiss
-          </a>
-          <p className="footer-desc" style={{ lineHeight: '1.6' }}>
-            At Zwiss English Classes, we believe that mastering English opens the door to better academic performance and future opportunities. Led by Ujjwal Sir, we offer result-oriented coaching for classes 9th to 12th, growing from 4 to 400+ students with a focus on quality and personal attention.
+          <Link to="/" className="footer-logo">
+            <img src={LogoImg} alt="Zwiss Logo" className="footer-logo-img" />
+            <span className="footer-logo-text">Zwiss <span className="text-gradient">English Classes</span></span>
+          </Link>
+          <p className="footer-desc">
+            Empowering students from 9th to 12th with a strong foundation in English. Join Ujjwal Sir's result-oriented coaching and achieve academic excellence.
           </p>
         </div>
         
@@ -20,10 +20,9 @@ const Footer = () => {
           <div className="footer-col">
             <h4>Quick Links</h4>
             <ul>
-              <li><a href="#home">Home</a></li>
-              <li><a href="#courses">Courses</a></li>
-              <li><a href="#about">About Us</a></li>
-             
+              <li><Link to="/" onClick={() => window.scrollTo(0, 0)}>Home</Link></li>
+              <li><Link to="/courses">Courses</Link></li>
+              <li><Link to="/about">About Us</Link></li>
             </ul>
           </div>
           

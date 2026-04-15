@@ -27,21 +27,21 @@ const Toppers = () => {
         <p className="section-subtitle">Consistent highest scores in English board exams year after year. Meet our proud achievers!</p>
       </div>
       
-      <div className="slider-container">
+      <div className="toppers-slider-container">
         {slides.map((slide, index) => (
           <div 
             key={index} 
-            className={`slider-slide ${index === currentIndex ? 'active' : ''}`}
+            className={`toppers-slide ${index === currentIndex ? 'active' : ''}`}
           >
             <div className="topper-year">{slide.year} Highest Scorer</div>
             <img src={slide.img} alt={slide.alt} className="topper-full-img" />
           </div>
         ))}
-        <div className="slider-dots">
+        <div className="toppers-dots">
           {slides.map((_, index) => (
             <span 
               key={index} 
-              className={`dot ${index === currentIndex ? 'active' : ''}`}
+              className={`toppers-dot ${index === currentIndex ? 'active' : ''}`}
               onClick={() => setCurrentIndex(index)}
             ></span>
           ))}

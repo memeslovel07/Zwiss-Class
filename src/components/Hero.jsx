@@ -21,12 +21,12 @@ const Hero = () => {
 
         </div>
 
-        <div className="hero-visual">
+        <div className="hero-visual" style={{overflow: 'visible', height: 'auto'}}>
           <div className="floating-card card-1 glass-panel">
             <div className="mockup-header">
-              <span className="dot dot-r"></span>
-              <span className="dot dot-y"></span>
-              <span className="dot dot-g"></span>
+              <span className="mockup-dot dot-r"></span>
+              <span className="mockup-dot dot-y"></span>
+              <span className="mockup-dot dot-g"></span>
             </div>
             <img src={HeroImg} alt="Face-to-Face Learning" className="mockup-img" />
           </div>
