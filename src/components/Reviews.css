@@ -1,0 +1,122 @@
+.reviews-page {
+  padding: 8rem 0;
+  background-color: #f4f1ea;
+  background-image: linear-gradient(#d9d9d9 1px, transparent 1px), linear-gradient(90deg, #d9d9d9 1px, transparent 1px);
+  background-size: 50px 50px;
+  min-height: 100vh;
+}
+
+.reviews-title {
+  font-family: 'Permanent Marker', cursive;
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  color: #333;
+  text-align: center;
+}
+
+.reviews-subtitle {
+  font-family: 'Caveat', cursive;
+  font-size: 1.8rem;
+  color: #555;
+  margin-bottom: 4rem;
+  text-align: center;
+}
+
+.book-layout {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 3rem;
+  padding: 2rem;
+}
+
+.guestbook-page {
+  background: #fff;
+  padding: 20px 20px 60px 20px;
+  box-shadow: 5px 5px 15px rgba(0,0,0,0.1);
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s;
+  cursor: pointer;
+  border: 1px solid #e0e0e0;
+}
+
+.guestbook-page:hover {
+  transform: translateY(-10px) rotate(1deg);
+  box-shadow: 15px 15px 30px rgba(0,0,0,0.15);
+}
+
+.paper-texture {
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background-image: url('https://www.transparenttextures.com/patterns/paper-fibers.png');
+  opacity: 0.1;
+  pointer-events: none;
+}
+
+.page-content {
+  width: 100%;
+  height: 100%;
+}
+
+.page-image {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border: 1px solid #eee;
+}
+
+.video-preview {
+  width: 100%;
+  height: 250px;
+  background: #000;
+  position: relative;
+  overflow: hidden;
+}
+
+.video-preview video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.8;
+}
+
+.play-hint {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 4rem;
+  color: white;
+  text-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.page-caption {
+  font-family: 'Caveat', cursive;
+  font-size: 1.8rem;
+  color: #444;
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
+.tape {
+  position: absolute;
+  top: -15px;
+  left: 50%;
+  transform: translateX(-50%) rotate(-2deg);
+  width: 100px;
+  height: 30px;
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(2px);
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.05);
+  border: 1px solid rgba(255,255,255,0.4);
+}
+
+.video-page {
+  border-top: 4px solid var(--accent-primary);
+}
+
+@media (max-width: 768px) {
+  .book-layout {
+    grid-template-columns: 1fr;
+    padding: 1rem;
+  }
+}

@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Gallery.css';
+import Lightbox from './Lightbox';
 
 import Img1 from '../../resources/1.jpeg';
 import Img2 from '../../resources/2.jpeg';
@@ -21,36 +22,62 @@ import Img19 from '../../resources/19.jpeg';
 import Img20 from '../../resources/20.jpeg';
 
 const Gallery = () => {
+  const [selectedImg, setSelectedImg] = useState(null);
+
   const photos = [
-    Img1, Img2, Img3, Img4, Img5, Img6, Img7, Img8, Img9, 
-    Img10, Img11, Img13, Img15, Img16, Img17, Img18, Img19, Img20
+    { src: Img1, label: "Classroom Vibes" },
+    { src: Img2, label: "Topper Talk" },
+    { src: Img3, label: "Interactive Session" },
+    { src: Img4, label: "Board Prep" },
+    { src: Img5, label: "Student Success" },
+    { src: Img6, label: "Grammar Masterclass" },
+    { src: Img7, label: "Learning Together" },
+    { src: Img8, label: "Our Pride" },
+    { src: Img9, label: "Study Focus" },
+    { src: Img10, label: "After Class" },
+    { src: Img11, label: "Happy Moments" },
+    { src: Img13, label: "Group Learning" },
+    { src: Img15, label: "Doubt Clearing" },
+    { src: Img16, label: "Bright Futures" },
+    { src: Img17, label: "Board Exam Ready" },
+    { src: Img18, label: "English Mastery" },
+    { src: Img19, label: "Teaching Fun" },
+    { src: Img20, label: "The Journey" }
   ];
 
   return (
     <div className="gallery-page-wrapper">
-      <section className="gallery-header" style={{textAlign: 'center', paddingTop: '6rem', paddingBottom: '2rem'}}>
+      <section className="gallery-header">
         <div className="container">
-          <h2 className="section-title">Our <span className="text-gradient">Photo Gallery</span></h2>
-          <p className="section-subtitle">A glimpse into our interactive classrooms and brilliant students.</p>
+          <h2 className="section-title">Memory <span className="text-gradient">Wall</span></h2>
+          <p className="section-subtitle">Captured moments from our journey of excellence.</p>
         </div>
       </section>
 
-      <section id="gallery" className="gallery-section">
+      <section className="gallery-section">
         <div className="container">
-          <div className="gallery-grid">
-            {photos.map((src, index) => (
-              <div className={`gallery-item item-${index + 1}`} key={index}>
-                <img src={src} alt={`Gallery photo ${index + 1}`} className="gallery-img" />
-                <div className="gallery-overlay">
-                  <span>View Photo</span>
+          <div className="memory-board">
+            {photos.map((photo, index) => (
+              <div 
+                className={`polaroid item-${index + 1}`} 
+                key={index}
+                onClick={() => setSelectedImg(photo.src)}
+              >
+                <div className="polaroid-inner">
+                  <img src={photo.src} alt={photo.label} className="polaroid-img" />
+                  <p className="polaroid-caption">{photo.label}</p>
                 </div>
               </div>
             ))}
           </div>
         </div>
       </section>
+
+      <Lightbox src={selectedImg} onClose={() => setSelectedImg(null)} />
     </div>
   );
 };
 
 export default Gallery;
+
+

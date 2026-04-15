@@ -15,7 +15,7 @@ const Hero = () => {
             Find <span className="text-gradient">Expert Tutors</span> for Face-to-Face Learning
           </h1>
           <p className="hero-subtitle" style={{fontSize: '1rem', lineHeight: '1.6'}}>
-            Looking for qualified offline tutors to provide in-person learning for your child? <strong>Ideal Tuition</strong> connects students with experienced tutors who offer one-on-one guidance, ensuring a better understanding of concepts and strong academic performance.
+            Looking for qualified offline tutors to provide in-person learning for your child? <strong>Zwiss English Classes</strong> connects students with experienced tutors who offer one-on-one guidance, ensuring a better understanding of concepts and strong academic performance.
           </p>
 
 

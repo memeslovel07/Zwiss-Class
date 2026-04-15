@@ -14,23 +14,17 @@ const About = () => {
         <div className="about-content glass-panel">
           <div className="about-text">
             <p className="lead">
-              At Zwiss English Classes, we believe that mastering English empowers students to unlock countless opportunities in their academic and professional journeys.
+              At Zwiss English Classes, we believe that mastering English opens the door to better academic performance and future opportunities.
             </p>
             <p>
-              Led by the experienced educator <strong>Ujjwal Sir</strong>, we offer highly specialized, results-driven English tuition for students from grades 9th to 12th. With a focus on comprehensive grammar, literature exploration, and practical answer writing techniques, our curriculum is designed not just to help students pass exams, but to help them truly understand and speak the language with confidence.
+              Led by <strong>Ujjwal Sir</strong>, who holds a Master of Arts (M.A.) in English and a Bachelor of Science (B.Sc.) with PCM, our institute combines strong academic expertise with practical teaching experience. He is also trained with D.El.Ed and is currently pursuing B.Ed, ensuring structured and effective teaching methods.
             </p>
             <p>
-              Having already mentored over <strong>400+ enrolled students</strong> across our two premium branches in Hamirpur, our mission is to reach out and deliver top-tier education to over 600 students this academic year. 
+              We offer result-oriented English coaching for students of classes 9th to 12th, with a clear focus on grammar, literature, and answer writing skills. Our approach is designed not just to complete the syllabus, but to build deep understanding and confident communication.
             </p>
-            <div style={{marginTop: '2rem'}}>
-              <h3 style={{marginBottom: '1rem', color: 'var(--accent-primary)'}}>Our Core Focus:</h3>
-              <ul style={{listStyle: 'none', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem', fontSize: '1.05rem', color: 'var(--text-primary)'}}>
-                <li>✅ Easy Grammar</li>
-                <li>✅ Writing Practice</li>
-                <li>✅ Weekly Tests</li>
-                <li>✅ Board Exam Focus</li>
-              </ul>
-            </div>
+            <p>
+              Starting with just 4 students in 2021, Zwiss English Classes has grown to mentor <strong>400+ students every year</strong> across its branches in Hamirpur. Our goal is to continue this journey by reaching 600+ students, while maintaining quality, discipline, and personal attention.
+            </p>
           </div>
           <div className="about-graphic">
             <div className="graphic-circle" style={{ overflow: 'hidden', border: '6px solid var(--accent-primary)' }}>

@@ -1,16 +1,18 @@
 import React from 'react';
 import './Footer.css';
+import LogoImg from '../../resources/logo.jpeg';
 
 const Footer = () => {
   return (
     <footer className="footer">
       <div className="container footer-container">
         <div className="footer-brand">
-          <a href="/" className="logo">
-            Zwiss <span className="text-gradient">English</span>
+          <a href="/" className="logo" style={{display: 'flex', alignItems: 'center'}}>
+            <img src={LogoImg} alt="Zwiss Logo" style={{height: '35px', borderRadius: '50%', marginRight: '8px'}} />
+            Zwiss
           </a>
           <p className="footer-desc" style={{ lineHeight: '1.6' }}>
-            Empowering students in Maudaha, Hamirpur with premium English education by Ujjwal Sir. Ideal Tuition delivers unparalleled academic results through structured face-to-face coaching, comprehensive board exam preparation, and tailored interactive learning designed exactly for your child's success.
+            At Zwiss English Classes, we believe that mastering English opens the door to better academic performance and future opportunities. Led by Ujjwal Sir, we offer result-oriented coaching for classes 9th to 12th, growing from 4 to 400+ students with a focus on quality and personal attention.
           </p>
         </div>
         

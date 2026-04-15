@@ -15,6 +15,7 @@ import Footer from './components/Footer'
 import WhatsAppButton from './components/WhatsAppButton'
 import ScrollToTop from './components/ScrollToTop'
 import CoursesList from './components/CoursesList'
+import ReviewsComponent from "./components/Reviews";
 
 function IndexPage() {
   return (
@@ -47,6 +48,15 @@ function AboutPage() {
   )
 }
 
+function ReviewsPage(){
+  return(
+<>
+<ReviewsComponent />
+</>
+
+  )
+}
+
 function App() {
   return (
     <BrowserRouter>
@@ -57,6 +67,7 @@ function App() {
         <Route path="/courses" element={<CoursesPage />} />
         <Route path="/gallery" element={<Gallery />} />
         <Route path="/about" element={<AboutPage />} />
+         <Route path="/reviews" element={<ReviewsPage />} />
       </Routes>
       <Footer />
       <WhatsAppButton />

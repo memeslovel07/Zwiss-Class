@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './Navbar.css';
+import LogoImg from '../../resources/logo.jpeg';
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -21,8 +22,8 @@ const Navbar = () => {
       <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
         <div className="container nav-container">
         <Link to="/" className="logo">
-          <img src="/logo.svg" alt="Zwiss Logo" className="logo-img" style={{height: '35px'}} />
-          <span className="text-gradient" style={{marginLeft: '8px', fontSize: '1.6rem'}}>English</span>
+          <img src={LogoImg} alt="Zwiss Logo" className="logo-img" />
+          <span className="logo-text text-gradient">Zwiss Class</span>
         </Link>
         
         <ul className="nav-links">
@@ -30,6 +31,7 @@ const Navbar = () => {
           <li><Link to="/courses">Courses</Link></li>
           <li><Link to="/gallery">Gallery</Link></li>
           <li><Link to="/about">About Us</Link></li>
+          <li><Link to="/reviews">Reviews</Link></li>
         </ul>
       </div>
     </nav>
