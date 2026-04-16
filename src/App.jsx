@@ -27,7 +27,7 @@ function IndexPage() {
     <>
       <Hero />
       <AboutPreview />
-      <Scorers2026 />
+      {/* <Scorers2026 /> */}
       <Features />
       <Toppers />
       <HomeGallerySlider />
