@@ -27,7 +27,7 @@ const Navbar = () => {
       <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
         <div className="container nav-container">
           <Link to="/" className="logo" onClick={closeMenu}>
-            <img src={LogoImg} alt="Zwiss Logo" className="logo-img" />
+            <img src={LogoImg} alt="Zwiss English classroom teaching students" className="logo-img" />
             <span className="logo-text text-gradient">Zwiss English Classes</span>
           </Link>
           
